@@ -1,0 +1,7 @@
+
+13/12/2018
+class 20 full complete:logo er kaj kora. hoyase.....codestar framework er kaj kora hoyeche........
+class 22 full complete:cs frameework er use kore header top area ------->user er show korar option
+                                                                             ----------->icon add kora
+                                                                            ------------>link,target set kora .......dynamic kora
+class

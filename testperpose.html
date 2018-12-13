@@ -1,0 +1,50 @@
+
+		<?php
+		global $post;
+		$args = array( 'posts_per_page' => 5, 'post_type'=> 'slide', 'orderby' => 'menu_order', 'order' => 'ASC' );
+		$myposts = get_posts( $args );
+		foreach( $myposts as $post ) : setup_postdata($post); ?>
+		 
+		<?php 
+		   $btn_tesz= get_post_meta($post->ID, 'btn_tesz', true); 
+		   $btn_link= get_post_meta($post->ID, 'btn_link', true); 
+		?>
+		 
+		    <div style="background-image: url(<?php the_post_thumbnail_url();?>)" class="homepage-slider ">
+			<div class="display-table">
+				<div class="display-table-cell">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-7">
+								<div class="slider-content">
+									<h1><?php  the_title();?></h1>
+									<?php the_content();?>
+									<a href="<?php echo $btn_link();?>"><?php echo $btn_tesz();?><i class="fa fa-long-arrow-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<?php endforeach; wp_reset_query(); ?>
+
+
+
+
+
+
+				<?php the_content();?>
+									<a href="<?php the_permalink();?>"><?php echo read_more(10);?></a>
+
+
+
+
+
+
+
+
+
+
+
+
